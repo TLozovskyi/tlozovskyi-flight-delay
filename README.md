@@ -1,38 +1,111 @@
 # Flight Delay Hackathon
-<!-- REPLACE THE TITLE WITH THE NAME OF THE EXERCISE -->
 
-This repository includes a Copilot hackathon intended to give you practical experience using the tool.
+This repository contains a Copilot hackathon project to help you build an application that predicts the chance of a flight being delayed by more than 15 minutes, based on the day of the week and arrival airport.
 
 ## 🎯 Goal
-<!-- ONE SENTENCE ABOUT THE GOAL OF THE EXERCISE -->
-Build an application which will allow someone to select the day of the week and arrival airport to see the chance their flight will be delayed by more than 15 minutes.
+
+Build an application that allows users to select the day of the week and arrival airport to see the chance their flight will be delayed by more than 15 minutes.
 
 ## ✍️ Programming Languages
-<!-- BULLETED LIST OF LANGUAGES INVOLVES -->
+
 - TypeScript / JavaScript
 - Python
 
 ## 💻 IDE
-<!-- OPTIONALLY SPECIFY THE IDEs THAT SHOULD BE USED -->
+
+- Visual Studio Code (recommended)
 - Visual Studio
-- Visual Studio Code
 - JetBrains IDEs
 
-## 🗒️ Guide
-<!-- STEP BY STEP INSTRUCTIONS DETAILING HOW TO COMPLETE THE EXERCISE -->
-[GitHub Copilot](https://github.com/features/copilot) is your AI pair programmer, built to support you throughout your development experience. As with any new tool, using GitHub Copilot requires learning a few new skills. This project is built to do exactly that, to give you an opportunity to build a project, using the language and tools you typically use, with GitHub Copilot.
+## 🛠️ Setup
 
-> **[Start hacking!](./hackathon.md)**
+After cloning the repository, run the setup script:
 
-## Requirements
+```bash
+bash setup.sh
+```
 
-This project is configured with a [devcontainer](./.devcontainer/devcontainer.json), which can be [run locally](https://code.visualstudio.com/docs/devcontainers/containers) or in a [codespace](https://github.com/features/codespaces). Please refer to the [setup exercise](./content/0-get-started.md) for more information.
+This will make `detect-shell.sh` executable.
 
-The project does assume you are familiar with programming, but is not prescriptive about language or framework choice.
+If you see `npm: command not found`, install Node.js and npm:
+
+```bash
+sudo apt update
+sudo apt install nodejs npm
+```
+
+## 🚀 Usage
+
+### Backend
+
+1. Navigate to the backend directory and install dependencies:
+    ```bash
+    cd tlozovskyi-flight-delay/server
+    pip3 install -r requirements.txt
+    ```
+2. Start the backend server (Flask example):
+    ```bash
+    python3 app.py
+    ```
+
+3. **To start a Jupyter Notebook locally:**
+    ```bash
+    cd tlozovskyi-flight-delay/server
+    pip3 install notebook  # if not already installed
+    jupyter notebook
+    ```
+    - Open the provided URL in your browser to access the Jupyter interface.
+
+4. **To start a FastAPI server locally:**
+    ```bash
+    cd tlozovskyi-flight-delay/server
+    pip3 install fastapi uvicorn  # if not already installed
+    uvicorn main:app --reload
+    ```
+    - Replace `main:app` with the correct Python file and app variable if different.
+    - Open [http://localhost:8000/docs](http://localhost:8000/docs) for the interactive API docs.
+
+### Frontend (React or SvelteKit)
+
+#### React
+
+1. Navigate to the frontend directory and install dependencies:
+    ```bash
+    cd tlozovskyi-flight-delay/frontend
+    npm install
+    ```
+2. Start the frontend development server:
+    ```bash
+    npm start
+    ```
+3. Open your browser to [http://localhost:3000](http://localhost:3000).
+
+- The main React entry point is `/frontend/src/index.jsx`.
+- The main app component is `/frontend/src/App.jsx`.
+- The flight delay UI logic is in `/frontend/src/FlightDelayApp.jsx`.
+
+#### SvelteKit
+
+1. Navigate to the SvelteKit client directory and install dependencies:
+    ```bash
+    cd tlozovskyi-flight-delay/client
+    npm install
+    ```
+2. Start the SvelteKit development server:
+    ```bash
+    npm run dev
+    ```
+3. Open your browser to the port shown in the terminal.
+
+## 📝 Troubleshooting
+
+- If you encounter CORS issues, configure your backend to allow requests from your frontend.
+- Ensure all dependencies are installed and the correct Python/Node.js versions are used.
+- If you have issues with the dev container, try rebuilding it from VS Code.
 
 ## 🤝 Contributing
-Contributions are warmly welcomed! ✨
 
-To contribute to a public exercise, please refer to our contribution guidelines [here](https://github.com/ps-copilot-sandbox/.github/blob/main/.github/CONTRIBUTING.md).
+Contributions are warmly welcomed! ✨  
+See [CONTRIBUTING.md](https://github.com/ps-copilot-sandbox/.github/blob/main/.github/CONTRIBUTING.md) for details.
 
-To create a net new exercise, please use [this repository template](https://github.com/ps-copilot-sandbox/copilot-exercise-template).
+---

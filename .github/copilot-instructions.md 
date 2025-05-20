@@ -1,0 +1,13 @@
+# copilot-instructions.md
+
+## GitHub Copilot Usage Instructions
+
+- Use Copilot suggestions as a starting point, not as final code.
+- Always review and test Copilot-generated code before committing.
+- Ensure all code follows the project's style and contribution guidelines.
+- Do not accept or commit any code that includes sensitive data, credentials, or proprietary information.
+- Add comments or documentation to clarify Copilot-generated code where necessary.
+- If unsure about a suggestion, ask for a review from another team member.
+- Refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for general contribution practices.
+
+---

@@ -1,0 +1,7 @@
+# This file is for documentation only. To install frontend dependencies, use npm:
+# npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+
+@mui/material
+@emotion/react
+@emotion/styled
+@mui/icons-material

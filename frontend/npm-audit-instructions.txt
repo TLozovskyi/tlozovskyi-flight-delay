@@ -1,0 +1,12 @@
+# npm found vulnerabilities in your dependencies.
+
+To address all issues (including breaking changes), run:
+npm audit fix --force
+
+To see details, run:
+npm audit
+
+To see which packages are looking for funding, run:
+npm fund
+
+# Note: Using --force may introduce breaking changes. Review the output before proceeding in production environments.
